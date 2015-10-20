@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountBalance", "AccountBa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbeddedSetup", "EmbeddedSetup\EmbeddedSetup.csproj", "{9644C94A-F189-49AD-8084-FE22AB25300B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbeddedTests", "EmbeddedTests\EmbeddedTests.csproj", "{56492A2A-413D-442A-AD79-07FFD73D5182}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9644C94A-F189-49AD-8084-FE22AB25300B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9644C94A-F189-49AD-8084-FE22AB25300B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9644C94A-F189-49AD-8084-FE22AB25300B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56492A2A-413D-442A-AD79-07FFD73D5182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56492A2A-413D-442A-AD79-07FFD73D5182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56492A2A-413D-442A-AD79-07FFD73D5182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56492A2A-413D-442A-AD79-07FFD73D5182}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
