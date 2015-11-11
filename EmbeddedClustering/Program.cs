@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using EventStore.Common.Log;
 
 namespace EmbeddedClustering
@@ -17,9 +18,9 @@ namespace EmbeddedClustering
             }
             else
             {
+                var nodeId = int.Parse(args[0]);
                 var node = GetEventStoreNode.Create(
-                    int.Parse(args[0]), 3, () => Console.WriteLine("I am master"), () => Console.WriteLine("I ain't"));
-
+                    nodeId, 3, () => Console.WriteLine("I am master"), () => Console.WriteLine("I ain't"));
                 node.Start();
 
                 Console.ReadLine();
