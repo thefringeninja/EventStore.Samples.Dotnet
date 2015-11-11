@@ -7,7 +7,7 @@ using EventStore.Core.Data;
 
 namespace EmbeddedClustering
 {
-    public static class GetEventStoreNode
+    public static class GetEventStoreClusterNode
     {
         public static ClusterVNode Create(int nodeId, int clusterSize, Action startProcessing, Action stopProcessing)
         {

@@ -53,7 +53,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="EnumerableExtensions.cs" />
-    <Compile Include="GetEventStoreNode.cs" />
+    <Compile Include="GetEventStoreClusterNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
