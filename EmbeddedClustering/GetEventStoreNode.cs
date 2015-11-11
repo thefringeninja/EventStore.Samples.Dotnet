@@ -20,18 +20,18 @@ namespace EmbeddedClustering
 
             var builder = EmbeddedVNodeBuilder
                 .AsClusterMember(clusterSize)
-                .WithWorkerThreads(1)
-                .WithInternalHeartbeatInterval(TimeSpan.FromSeconds(5))
-                .WithGossipSeeds(
-                    gossipSeeds)
+                .WithInternalHeartbeatTimeout(TimeSpan.FromSeconds(5))
+                .WithInternalHeartbeatInterval(TimeSpan.FromMinutes(5))
+                .WithExternalHeartbeatTimeout(TimeSpan.FromSeconds(5))
+                .WithExternalHeartbeatInterval(TimeSpan.FromMinutes(5))
+                .WithGossipSeeds(gossipSeeds)
                 .RunInMemory()
-                
                 .WithInternalTcpOn(new IPEndPoint(IPAddress.Loopback, 1111 + nodeId * i))
                 .WithExternalTcpOn(new IPEndPoint(IPAddress.Loopback, 1112 + nodeId * i))
                 .WithInternalHttpOn(new IPEndPoint(IPAddress.Loopback, 1113 + nodeId * i))
-                .AddInternalHttpPrefix("http://*:" + (1113 + nodeId * i) + "/")
+                .AddInternalHttpPrefix("http://+:" + (1113 + nodeId * i) + "/")
                 .WithExternalHttpOn(new IPEndPoint(IPAddress.Loopback, 1114 + nodeId * i))
-                .AddExternalHttpPrefix("http://*:" + (1114 + nodeId * i) + "/")
+                .AddExternalHttpPrefix("http://+:" + (1114 + nodeId * i) + "/")
                 .WithTfChunkSize(1024 * 1024);
 
             ClusterVNode node = builder;
