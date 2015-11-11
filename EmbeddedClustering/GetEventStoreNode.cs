@@ -29,9 +29,9 @@ namespace EmbeddedClustering
                 .WithInternalTcpOn(new IPEndPoint(IPAddress.Loopback, 1111 + nodeId * i))
                 .WithExternalTcpOn(new IPEndPoint(IPAddress.Loopback, 1112 + nodeId * i))
                 .WithInternalHttpOn(new IPEndPoint(IPAddress.Loopback, 1113 + nodeId * i))
-                .AddInternalHttpPrefix("http://*:" + 1113 + nodeId * i + "/")
+                .AddInternalHttpPrefix("http://*:" + (1113 + nodeId * i) + "/")
                 .WithExternalHttpOn(new IPEndPoint(IPAddress.Loopback, 1114 + nodeId * i))
-                .AddExternalHttpPrefix("http://*:" + 1114 + nodeId * i + "/")
+                .AddExternalHttpPrefix("http://*:" + (1114 + nodeId * i) + "/")
                 .WithTfChunkSize(1024 * 1024);
 
             ClusterVNode node = builder;
